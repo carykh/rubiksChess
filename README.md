@@ -1,3 +1,5 @@
+My Rubik's Chess project is play-able here! https://htwins.net/rubikschess/
+
 I demonstrated how this game works in this YouTube video! https://www.youtube.com/watch?v=TQDTl9qyfLA
 
 Recent changes on March 27, 2024:
