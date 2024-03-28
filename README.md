@@ -1,6 +1,6 @@
 My Rubik's Chess project is play-able here! https://htwins.net/rubikschess/
 
-I demonstrated how this game works in this YouTube video! https://www.youtube.com/watch?v=TQDTl9qyfLA
+I demonstrated how this game works in this YouTube video: https://www.youtube.com/watch?v=TQDTl9qyfLA
 
 Recent changes on March 27, 2024:
 - Knights' paths now work correctly near corners, allowing the L-bend to cross multiple boundaries at once.
