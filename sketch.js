@@ -1,5 +1,5 @@
 function createBoard(n, str){
-  var parts = str.split(/\r?\n|\r|\n/g);
+  var parts = str.split(/\r?\n|\r| |\n/g);
   var freq;
   if(parts.length <= 1){
     freq = 0.40;
