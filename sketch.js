@@ -472,7 +472,10 @@ function standardGameButton(){
   createNewGame("YYYY hhspp-- hrbbp-- snrqs-- pnqkp-- ppspp-- ------- ------- --PPSHH --PBBRH --SQRNS --PKQNP --PPSPP ------- -------");
 }
 function sandboxGameButton(){
-  createNewGame("NYNY 0.4");
+  createNewGame("NYYY 0.4");
+}
+function walledGameButton(){
+  createNewGame("YNYY hhspp-- hrbbp-- snrqs-- pnqkp-- ppspp-- ------- ------- --PPSHH --PBBRH --SQRNS --PKQNP --PPSPP ------- -------");
 }
 function createNewGame(str){
   var parts = str.split(" ");
@@ -1089,7 +1092,7 @@ function setup() {
   createCanvas(W_W, W_H, WEBGL);
   c = createGraphics(W_W, W_H, WEBGL);
   addScreenPositionFunction(c);
-  createNewGame("NYYY");
+  sandboxGameButton();
   ui = createGraphics(260,900);
 };
 
