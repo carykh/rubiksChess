@@ -1,11 +1,11 @@
 function createBoard(n, str){
-  var parts = str.split(" ");
+  var parts = str.split(/\r?\n|\r|\n/g);
   var freq;
-  if(parts.length == 1){
+  if(parts.length <= 1){
     freq = 0.40;
-  }else if(parts.length == 2){
-    freq = parseFloat(parts[1]);
-  }else if(parts.length >= 3){
+  }else if(parts.length == 2 && !isNaN(parseFloat(parts[1]))){
+    freq = Math.max(0,parseFloat(parts[1]));
+  }else{
     freq = -1;
   }
 
@@ -469,15 +469,16 @@ function customGameButton(){
   createNewGame(newGameString);
 }
 function standardGameButton(){
-  createNewGame("YYYY hhspp-- hrbbp-- snrqs-- pnqkp-- ppspp-- ------- ------- --PPSHH --PBBRH --SQRNS --PKQNP --PPSPP ------- -------");
+  createNewGame("YYYY\nhhspp--\nhrbbp--\nsnrqs--\npnqkp--\nppspp--\n-------\n-------\n--PPSHH\n--PBBRH\n--SQRNS\n--PKQNP\n--PPSPP\n-------\n-------");
 }
 function sandboxGameButton(){
   createNewGame("NYYY 0.4");
 }
 function walledGameButton(){
-  createNewGame("YNYY hhspp-- hrbbp-- snrqs-- pnqkp-- ppspp-- ------- ------- --PPSHH --PBBRH --SQRNS --PKQNP --PPSPP ------- -------");
+  createNewGame("YNYY\nhhspp--\nhrbbp--\nsnrqs--\npnqkp--\nppspp--\n-------\n-------\n--PPSHH\n--PBBRH\n--SQRNS\n--PKQNP\n--PPSPP\n-------\n-------");
 }
 function createNewGame(str){
+  document.getElementById("newGame").value = str;
   var parts = str.split(" ");
   var options = parts[0].toUpperCase();
   TAKE_TURNS = (options.charAt(0) == 'Y');
